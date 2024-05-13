@@ -74,24 +74,24 @@ function searchUsersByName() {
   // Si no se encuentran usuarios, mostrar un mensaje
   if (filteredUsers.length === 0) {
     document.getElementById("app").innerHTML =
-      "<p>No se encontraron usuarios con ese nombre.</p>";
+      "<p>No users with that name were found.</p>";
   } else {
     // Si se encuentran usuarios, renderizarlos
     renderUsers(filteredUsers);
   }
 
-  // Agregar un botón "Ver Todos" siempre
+  // Agregar un botón "See all"
   const appElement = document.getElementById("app");
   const verTodosButton = createVerTodosButton();
 
-  // Insertar el botón "Ver Todos" después de los usuarios (o el mensaje si no se encontraron usuarios)
+  // Insertar el botón "See all" después de los usuarios (o el mensaje si no se encontraron usuarios)
   appElement.appendChild(verTodosButton);
 }
 
-// Función para crear el botón "Ver Todos"
+// Función para crear el botón "See all"
 function createVerTodosButton() {
   const verTodosButton = document.createElement("button");
-  verTodosButton.textContent = "Ver Todos";
+  verTodosButton.textContent = "See all";
 
   verTodosButton.addEventListener("click", () => {
     // Mostrar todos los usuarios nuevamente
@@ -116,9 +116,6 @@ function router() {
   const path = window.location.hash.substring(1);
   if (path === "" || path === "users") {
     loadUsers();
-  } else if (path.startsWith("user/")) {
-    const userId = path.split("/")[1];
-    loadUserDetails(userId);
   } else {
     // Ruta no encontrada
     loadView("404");
