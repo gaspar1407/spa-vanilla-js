@@ -1,0 +1,128 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    text-align: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    height: auto;
+}
+
+
+button{
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #ffd700;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    color: #000;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 2px solid #ffd700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    color: #ffd700;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar .search-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .search-input {
+    padding: 10px;
+    width: 450px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+
+
+
+/* Estilos de la tarjeta de usuario */
+.user-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.user-card:hover {
+    background-color: #fcdc85;
+}
+
+.user-card.expanded {
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.user-details {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer a{
+    color: #ffd700;
+    text-decoration: none;
+}
+
+/* Estilos para dispositivos móviles */
+
+@media only screen and (max-width: 480px) {
+
+    .navbar {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .navbar form {
+        margin-top: 20px; 
+    }
+    .navbar .search-input {
+        width: 80%; 
+    }
+
+
+    .user-card {
+        width: 300px; 
+        margin: 10px auto; 
+    }
+}
